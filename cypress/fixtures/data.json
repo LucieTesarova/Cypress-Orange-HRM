@@ -1,0 +1,16 @@
+{
+"Adress":
+{
+"homepage": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+},
+ "Login":
+{
+  "username": "Admin",
+  "password": "admin123",
+  "invalidUsername": "InvalidUsername",
+  "invalidPassword": "invalidPassword123"
+}
+}
+
+
+
