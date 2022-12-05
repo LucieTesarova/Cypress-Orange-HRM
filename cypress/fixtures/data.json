@@ -1,7 +1,8 @@
 {
 "Adress":
 {
-"homepage": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+"homepage": "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+"loginPage": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 },
  "Login":
 {
