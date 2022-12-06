@@ -10,6 +10,11 @@
   "password": "admin123",
   "invalidUsername": "InvalidUsername",
   "invalidPassword": "invalidPassword123"
+},
+"SystemUsers":
+{
+"validUsername1": "Anthony.Nolan",
+"invalidUsername": "InvalidUsername"
 }
 }
 
