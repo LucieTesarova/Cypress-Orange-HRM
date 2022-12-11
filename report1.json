@@ -1,0 +1,302 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 10,
+    "passes": 9,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-11T09:22:58.603Z",
+    "end": "2022-12-11T09:23:44.349Z",
+    "duration": 31444,
+    "testsRegistered": 10,
+    "passPercent": 90,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41ef2fd2-d41d-4c34-b398-0f504fa26980",
+      "title": "",
+      "fullFile": "cypress\\e2e\\system_users_verification.cy.js",
+      "file": "cypress\\e2e\\system_users_verification.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+          "title": "All search function tests cheking username",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verification search function with valid username",
+              "fullTitle": "All search function tests cheking username Verification search function with valid username",
+              "timedOut": null,
+              "duration": 6256,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.enterUsername(this.data.SystemUsers.validUsername1);\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"(1) Record Found\");\ncy.get('.oxd-table-card > .oxd-table-row > :nth-child(2) > div').should(\"contain\", \"Anthony.Nolan\");",
+              "err": {},
+              "uuid": "ee320b91-5334-4069-9c73-6594b5d15427",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verification search function with invalid username",
+              "fullTitle": "All search function tests cheking username Verification search function with invalid username",
+              "timedOut": null,
+              "duration": 3962,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.enterUsername(this.data.SystemUsers.invalidUsername);\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"No Records Found\");\ncy.get('.oxd-toast').should(\"be.visible\");",
+              "err": {},
+              "uuid": "a7665f6c-3974-4473-8356-60b1a4134132",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verification search function without any filter",
+              "fullTitle": "All search function tests cheking username Verification search function without any filter",
+              "timedOut": null,
+              "duration": 7498,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"(35) Records Found\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span.oxd-text.oxd-text--span>' to contain '(35) Records Found'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span.oxd-text.oxd-text--span>' to contain '(35) Records Found'\n    at Context.eval (webpack:///./cypress/e2e/system_users_verification.cy.js:47:56)",
+                "diff": null
+              },
+              "uuid": "7d3cc34f-47a6-466d-8456-ed00540d35dc",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee320b91-5334-4069-9c73-6594b5d15427",
+            "a7665f6c-3974-4473-8356-60b1a4134132"
+          ],
+          "failures": [
+            "7d3cc34f-47a6-466d-8456-ed00540d35dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17716,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login_verification.cy.js",
+      "file": "cypress\\e2e\\login_verification.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "TS_1_TC_001_Login with valid username and valid password",
+          "fullTitle": "TS_1_TC_001_Login with valid username and valid password",
+          "timedOut": null,
+          "duration": 4105,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.get('.oxd-alert').should(\"not.exist\");\ncy.url().should('eq', this.data.Adress.homepage);",
+          "err": {},
+          "uuid": "a97fcb18-7a7d-41e8-b149-ae6b9cebc4be",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_002_Login with valid username and invalid password",
+          "fullTitle": "TS_1_TC_002_Login with valid username and invalid password",
+          "timedOut": null,
+          "duration": 2098,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.invalidPassword);\nloginPage.clickLogin();\ncy.get('.oxd-alert').should(\"be.visible\");\ncy.get('.oxd-alert-content > .oxd-text').should(\"contain\", \"Invalid credentials\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "5dfd14e6-f1ed-45cd-8e70-0d203146c8c4",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_003_Login with invalid username and valid password",
+          "fullTitle": "TS_1_TC_003_Login with invalid username and valid password",
+          "timedOut": null,
+          "duration": 1762,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(this.data.Login.invalidUsername);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.get('.oxd-alert').should(\"be.visible\");\ncy.get('.oxd-alert-content > .oxd-text').should(\"contain\", \"Invalid credentials\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "49dad388-8c0f-491d-b292-e2b66487ce6e",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_004_Login with invalid username and invalid password",
+          "fullTitle": "TS_1_TC_004_Login with invalid username and invalid password",
+          "timedOut": null,
+          "duration": 1908,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(this.data.Login.invalidUsername);\nloginPage.enterPassword(this.data.Login.invalidPassword);\nloginPage.clickLogin();\ncy.get('.oxd-alert').should(\"be.visible\");\ncy.get('.oxd-alert-content > .oxd-text').should(\"contain\", \"Invalid credentials\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "4fc55e30-cabc-4df8-b04c-aa25da91fba9",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_005_Login with blank username and blank password",
+          "fullTitle": "TS_1_TC_005_Login with blank username and blank password",
+          "timedOut": null,
+          "duration": 966,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(\" \");\nloginPage.enterPassword(\" \");\nloginPage.clickLogin();\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should(\"be.visible\").and(\"contain\", \"Required\");\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should(\"be.visible\").and(\"contain\", \"Required\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "62cce40f-654e-40ee-9297-a4b0b4894d97",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_006_Login with blank username and valid password",
+          "fullTitle": "TS_1_TC_006_Login with blank username and valid password",
+          "timedOut": null,
+          "duration": 1624,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(\" \");\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.get(':nth-child(2) > .oxd-input-group > .oxd-text').should(\"be.visible\").and(\"contain\", \"Required\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "36d1eed6-3687-4b72-a388-5dbbe6290790",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "TS_1_TC_007_Login with valid username and blank password",
+          "fullTitle": "TS_1_TC_007_Login with valid username and blank password",
+          "timedOut": null,
+          "duration": 1265,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(\" \");\nloginPage.clickLogin();\ncy.get(':nth-child(3) > .oxd-input-group > .oxd-text').should(\"be.visible\").and(\"contain\", \"Required\");\ncy.url().should('eq', this.data.Adress.loginPage);",
+          "err": {},
+          "uuid": "6bf00c19-f934-4d81-800b-25d3cc70d174",
+          "parentUUID": "6858fa49-b8cb-4639-ab3a-7748b0592be3",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "a97fcb18-7a7d-41e8-b149-ae6b9cebc4be",
+        "5dfd14e6-f1ed-45cd-8e70-0d203146c8c4",
+        "49dad388-8c0f-491d-b292-e2b66487ce6e",
+        "4fc55e30-cabc-4df8-b04c-aa25da91fba9",
+        "62cce40f-654e-40ee-9297-a4b0b4894d97",
+        "36d1eed6-3687-4b72-a388-5dbbe6290790",
+        "6bf00c19-f934-4d81-800b-25d3cc70d174"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 13728,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": "true",
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

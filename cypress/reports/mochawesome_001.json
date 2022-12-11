@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-11T09:23:18.452Z",
+    "end": "2022-12-11T09:23:37.466Z",
+    "duration": 19014,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41ef2fd2-d41d-4c34-b398-0f504fa26980",
+      "title": "",
+      "fullFile": "cypress\\e2e\\system_users_verification.cy.js",
+      "file": "cypress\\e2e\\system_users_verification.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+          "title": "All search function tests cheking username",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verification search function with valid username",
+              "fullTitle": "All search function tests cheking username Verification search function with valid username",
+              "timedOut": null,
+              "duration": 6256,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.enterUsername(this.data.SystemUsers.validUsername1);\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"(1) Record Found\");\ncy.get('.oxd-table-card > .oxd-table-row > :nth-child(2) > div').should(\"contain\", \"Anthony.Nolan\");",
+              "err": {},
+              "uuid": "ee320b91-5334-4069-9c73-6594b5d15427",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verification search function with invalid username",
+              "fullTitle": "All search function tests cheking username Verification search function with invalid username",
+              "timedOut": null,
+              "duration": 3962,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.enterUsername(this.data.SystemUsers.invalidUsername);\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"No Records Found\");\ncy.get('.oxd-toast').should(\"be.visible\");",
+              "err": {},
+              "uuid": "a7665f6c-3974-4473-8356-60b1a4134132",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verification search function without any filter",
+              "fullTitle": "All search function tests cheking username Verification search function without any filter",
+              "timedOut": null,
+              "duration": 7498,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername(this.data.Login.username);\nloginPage.enterPassword(this.data.Login.password);\nloginPage.clickLogin();\ncy.contains('Admin').click();\nsystemUsers.clickSearch();\ncy.get('.orangehrm-horizontal-padding > .oxd-text').should(\"contain\", \"(35) Records Found\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span.oxd-text.oxd-text--span>' to contain '(35) Records Found'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span.oxd-text.oxd-text--span>' to contain '(35) Records Found'\n    at Context.eval (webpack:///./cypress/e2e/system_users_verification.cy.js:47:56)",
+                "diff": null
+              },
+              "uuid": "7d3cc34f-47a6-466d-8456-ed00540d35dc",
+              "parentUUID": "a12b5cab-7875-4990-85a0-4fce5eb999ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee320b91-5334-4069-9c73-6594b5d15427",
+            "a7665f6c-3974-4473-8356-60b1a4134132"
+          ],
+          "failures": [
+            "7d3cc34f-47a6-466d-8456-ed00540d35dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17716,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": "true",
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
